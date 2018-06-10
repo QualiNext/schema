@@ -4,76 +4,24 @@
   "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
   "properties": {
-    "checked": {
-      "$id": "/properties/checked",
-      "type": "boolean",
-      "title": "The Checked Schema ",
-      "default": false,
-      "examples": [
-        false
-      ]
-    },
-    "dimensions": {
-      "$id": "/properties/dimensions",
-      "type": "object",
-      "properties": {
-        "width": {
-          "$id": "/properties/dimensions/properties/width",
-          "type": "integer",
-          "title": "The Width Schema ",
-          "default": 0
-        },
-        "height": {
-          "$id": "/properties/dimensions/properties/height",
-          "type": "integer",
-          "title": "The Height Schema ",
-          "default": 0,
-          "examples": [
-            10
-          ]
-        }
-      }
-    },
-    "id": {
-      "$id": "/properties/id",
+    "spec_version": {
+      "$id": "/properties/spec_version",
       "type": "integer",
-      "title": "The Id Schema ",
-      "default": 0,
-      "examples": [
-        1
-      ]
+      "title": "The Spec_version Schema",
+      "default": 1,
+      "examples": [1],
+      "enum" : [1]
     },
-    "name": {
-      "$id": "/properties/name",
+    "kind": {
+      "$id": "/properties/kind",
       "type": "string",
-      "title": "The Name Schema ",
+      "title": "The Kind Schema ",
       "default": "",
       "examples": [
-        "A green door"
-      ]
-    },
-    "price": {
-      "$id": "/properties/price",
-      "type": "number",
-      "title": "The Price Schema ",
-      "default": 0,
-      "examples": [
-        12.5
-      ]
-    },
-    "tags": {
-      "$id": "/properties/tags",
-      "type": "array",
-      "items": {
-        "$id": "/properties/tags/items",
-        "type": "string",
-        "title": "The 0th Schema ",
-        "default": "",
-        "examples": [
-          "home",
-          "green"
-        ]
-      }
+        "blueprint"
+      ],
+      "enum": [ "blueprint" ]
     }
-  }
+  },
+  "required": ["spec_version", "kind"]
 }
